@@ -6,3 +6,13 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+--
+-- Auto-save on every change
+-- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+--   callback = function()
+--     local mode = vim.fn.mode()
+--     if mode ~= "c" then -- avoid saving during command-line mode
+--       vim.cmd("silent! wall") -- save all buffers
+--     end
+--   end,
+-- })
