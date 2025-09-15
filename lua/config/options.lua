@@ -1,3 +1,8 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+-- LazyVim root detection fix
+vim.g.root_spec = { "cwd" }
+
+-- Alternative: Keep LSP detection but ensure cwd takes priority
+-- vim.g.root_spec = { "cwd", "lsp", { ".git", "lua" } }
+
+-- Disable auto-changing directory behavior
+vim.opt.autochdir = false

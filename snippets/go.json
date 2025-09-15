@@ -1,0 +1,22 @@
+{
+  "if err != nil": {
+    "prefix": "err",
+    "body": ["if err != nil {", "\t$0", "}"],
+    "description": "If error not nil block"
+  },
+  "if err != nil return": {
+    "prefix": "errr",
+    "body": ["if err != nil {", "\treturn $0", "}"],
+    "description": "If error not nil return block"
+  },
+
+  "if err := arg; err != nil return": {
+    "prefix": "errh",
+    "body": [
+      "if ${1:arg1}, err := ${2:arg2}; err != nil {",
+      "\treturn err",
+      "}"
+    ],
+    "description": "If error check with assignment and return using default 'err' variable"
+  }
+}
