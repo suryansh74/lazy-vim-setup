@@ -1,6 +1,18 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
+    config = function()
+      -- Your existing telescope setup
+      require("telescope").setup({
+        -- your settings
+      })
+
+      -- Load extensions
+      require("telescope").load_extension("neoclip") -- ✅ Add this
+    end,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
     opts = function(_, opts)
       local actions = require("telescope.actions")
 

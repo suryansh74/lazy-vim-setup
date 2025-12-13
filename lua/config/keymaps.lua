@@ -15,3 +15,10 @@ vim.keymap.set("i", "<C-b>", "<C-w>", { desc = "Delete word backward" })
 vim.keymap.set("n", "<leader>uk", function()
   require("screenkey").toggle()
 end, { desc = "Toggle Screenkey" })
+
+vim.keymap.set(
+  "n",
+  "<CR>",
+  [[{-> v:hlsearch ? ":nohl\<CR>" : "\<CR>"}()]],
+  { silent = true, expr = true, desc = "Clear highlight" }
+)

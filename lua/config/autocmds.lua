@@ -17,3 +17,23 @@
 --   end,
 -- })
 --
+-- Save and restore cursor position and view when switching buffers
+vim.api.nvim_create_autocmd("BufLeave", {
+  pattern = "*",
+  callback = function()
+    -- Save current view (includes scroll position)
+    if vim.fn.expand("%") ~= "" then
+      vim.cmd("silent! mkview")
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    -- Restore saved view
+    if vim.fn.expand("%") ~= "" then
+      vim.cmd("silent! loadview")
+    end
+  end,
+})

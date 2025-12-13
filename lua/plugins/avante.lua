@@ -109,7 +109,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick",
+    "nvim-mini/mini.pick",
     "nvim-telescope/telescope.nvim",
     "hrsh7th/nvim-cmp",
     "ibhagwan/fzf-lua",
