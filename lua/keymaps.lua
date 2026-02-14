@@ -7,6 +7,9 @@ vim.keymap.set("v", "jk", "<esc>", { noremap = true, silent = true })
 vim.keymap.set("i", "kj", "<esc>", { noremap = true, silent = true })
 vim.keymap.set("v", "kj", "<esc>", { noremap = true, silent = true })
 
+-- Redo with Shift+U
+vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
+
 -- for autosave
 
 vim.keymap.set("n", "jk", ":w<CR>", { noremap = true, silent = true })
@@ -22,9 +25,6 @@ end, { desc = "Test Alt+Enter" })
 
 -- toggling next and previous buffers
 vim.keymap.set("n", "<leader>ba", "<C-^>", { desc = "Alternate buffer" })
-
--- Redo with Shift+U
-vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
 
 -- Run test cases in golang
 vim.keymap.set("n", "<leader>ct", function()

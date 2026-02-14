@@ -1,0 +1,27 @@
+{
+  "and": {
+    "prefix": "and",
+    "body": "/\\ $0",
+    "description": "TLA+ AND operator"
+  },
+  "or": {
+    "prefix": "or",
+    "body": "\\/ $0",
+    "description": "TLA+ OR operator"
+  },
+  "not": {
+    "prefix": "not",
+    "body": "~ $0",
+    "description": "TLA+ NOT operator"
+  },
+  "implies": {
+    "prefix": "implies",
+    "body": "=> $0",
+    "description": "TLA+ IMPLIES operator"
+  },
+  "equiv": {
+    "prefix": "equiv",
+    "body": "<=> $0",
+    "description": "TLA+ EQUIVALENCE operator"
+  }
+}

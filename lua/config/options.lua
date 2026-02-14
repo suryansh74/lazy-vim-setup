@@ -19,3 +19,10 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
 vim.opt.hlsearch = false
 
 vim.g.lazyvim_php_lsp = "intelephense"
+
+vim.opt.spell = false
+
+-- Disable codebook LSP spell suggestions
+vim.g.lazyvim_lsp_servers = {
+  codebook = false,
+}

@@ -39,3 +39,12 @@ vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#5eacd3", bold = true })
 -- For pasting above line
 vim.keymap.set("n", "<leader>p", ":put<CR>", { desc = "Paste below line" })
 vim.keymap.set("n", "<leader>P", ":put!<CR>", { desc = "Paste above line" })
+
+-- For reloading buffer
+vim.keymap.set("n", "<leader>r", ":e!<CR>", {
+  desc = "Reload buffer (discard changes)",
+  silent = true,
+})
+
+-- for tla config
+require("config.filetype")

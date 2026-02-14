@@ -3,8 +3,11 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        -- Disable codebook LSP
+        codebook = false,
+
         html = {
-          filetypes = { "html", "templ" },
+          filetypes = { "html", "templ", "gotmpl", "jet" },
         },
         emmet_language_server = {
           filetypes = {
