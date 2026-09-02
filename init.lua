@@ -10,6 +10,9 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
   end,
 })
 
+-- make cursor always at the center
+vim.opt.scrolloff = 16
+
 -- Disable swapfile globally (optional, but you set it)
 vim.o.swapfile = false
 
@@ -48,3 +51,6 @@ vim.keymap.set("n", "<leader>r", ":e!<CR>", {
 
 -- for tla config
 require("config.filetype")
+
+-- w,b,e are even jumping from fullstops so fix is
+vim.opt.iskeyword:remove(".")

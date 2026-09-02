@@ -16,6 +16,8 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
   end,
 })
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.hlsearch = false
 
 vim.g.lazyvim_php_lsp = "intelephense"

@@ -22,3 +22,14 @@ vim.keymap.set(
   [[{-> v:hlsearch ? ":nohl\<CR>" : "\<CR>"}()]],
   { silent = true, expr = true, desc = "Clear highlight" }
 )
+
+-- LspRestart
+vim.keymap.set("n", "<leader>lr", function()
+  local clients = vim.lsp.get_clients({ bufnr = 0 })
+  for _, client in ipairs(clients) do
+    client.stop()
+  end
+  vim.defer_fn(function()
+    vim.cmd("edit")
+  end, 100)
+end, { desc = "Restart LSP (manual)" })

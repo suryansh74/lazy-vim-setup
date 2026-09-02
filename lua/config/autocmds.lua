@@ -46,3 +46,5 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     require("conform").format({ async = false, lsp_fallback = true })
   end,
 })
+
+vim.lsp.handlers["$/progress"] = function() end

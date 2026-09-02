@@ -5,6 +5,17 @@ return {
     opts = {
       servers = {
         pyright = {
+          capabilities = (function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            capabilities.workspace = capabilities.workspace or {}
+            capabilities.workspace.didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            }
+            return capabilities
+          end)(),
+          flags = {
+            debounce_text_changes = 150,
+          },
           settings = {
             python = {
               analysis = {
@@ -15,6 +26,16 @@ return {
             },
           },
         },
+      },
+    },
+  },
+
+  {
+    "folke/snacks.nvim",
+    opts = {
+      image = { enabled = true },
+      notifier = {
+        enabled = true,
       },
     },
   },

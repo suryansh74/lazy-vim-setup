@@ -24,6 +24,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -38,8 +39,8 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
+    enabled = false, -- check for plugin updates periodically
+    -- notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
     rtp = {

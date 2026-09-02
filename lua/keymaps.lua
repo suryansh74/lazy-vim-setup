@@ -38,3 +38,8 @@ vim.keymap.set("n", "<leader>ct", function()
   -- Open coverage summary
   vim.cmd("CoverageSummary")
 end, { desc = "Run tests + load/show coverage + summary" })
+
+-- Go to last line and center it (works on first press)
+vim.keymap.set("n", "G", function()
+  vim.cmd("normal! Gzz")
+end, { noremap = true, silent = true, desc = "Go to last line + center" })
